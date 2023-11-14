@@ -37,4 +37,15 @@ public class TesteObserver {
 
         assertEquals(3, observavel.getContagemPalavrasMaiusculas());
     }
+
+    @Test
+    public void testContadorDePalavrasFalso() {
+        Observavel observavel = new Observavel();
+        Observador observador = new Observador(1);
+
+        observavel.contaPalavras(observador);
+        observavel.setContadorDePalavras("O prof Chris não é o Phyll");
+
+        assertNotEquals(8, observavel.getContagemPalavras());
+    }
 }
