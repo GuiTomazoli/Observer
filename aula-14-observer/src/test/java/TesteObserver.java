@@ -11,9 +11,9 @@ public class TesteObserver {
         Observador observador = new Observador(1);
 
         observavel.contaPalavras(observador);
-        observavel.setContadorDePalavras("Esta é uma frase de teste.");
+        observavel.setContadorDePalavras("O prof Chris não é o Phyll");
 
-        assertEquals(6, observavel.getContagemPalavras());
+        assertEquals(7, observavel.getContagemPalavras());
     }
 
     @Test
@@ -22,9 +22,9 @@ public class TesteObserver {
         Observador observador = new Observador(1);
 
         observavel.contaPares(observador);
-        observavel.setContadorDePalavras("Esta é uma frase de teste.");
+        observavel.setContadorDePalavras("O prof Chris não é o Phyll");
 
-        assertEquals(2, observavel.getContagemPalavrasPares());
+        assertEquals(1, observavel.getContagemPalavrasPares());
     }
 
     @Test
@@ -33,19 +33,8 @@ public class TesteObserver {
         Observador observador = new Observador(1);
 
         observavel.contaMaiusculas(observador);
-        observavel.setContadorDePalavras("Esta é uma frase de teste.");
+        observavel.setContadorDePalavras("O prof Chris não é o Phyll");
 
-        assertEquals(2, observavel.getContagemPalavrasMaiusculas());
-    }
-
-    @Test
-    public void testNotificacaoObservadores() {
-        Observavel observavel = new Observavel();
-        Observador observador = new Observador(1);
-
-        observavel.contaPalavras(observador);
-        observavel.notificaObservadores();
-
-
+        assertEquals(3, observavel.getContagemPalavrasMaiusculas());
     }
 }
