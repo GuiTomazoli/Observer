@@ -48,7 +48,6 @@ public class Observavel implements iObservavel {
         notificaObservadores();
     }
 
-    // Atualizei o método para contar as palavras e notificar os observadores
     public void setContadorDePalavras(String frase) {
         String[] palavras = frase.split("\\s+");
         contagemPalavras = palavras.length;
